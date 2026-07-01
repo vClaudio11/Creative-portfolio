@@ -5,16 +5,18 @@ import { Field } from "./ui/field"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card"
 import { Button } from "./ui/button"
 
+const videoArray = [ "/videos/hero/telesin-1.mov", 
+                    "/videos/hero/telesin-1.mov",
+                    "/videos/hero/telesin-1.mov",
+                    "/videos/hero/telesin-1.mov"
+]
+
 export default function Hero() {
     const [activeIndex, setActiveIndex] = useState(0)
     const throttle = useRef(false)
     const carouselRef = useRef<HTMLDivElement>(null)
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
 
-    const videoArray = [ "/videos/hero/telesin-1.mov", 
-                        "/videos/hero/telesin-1.mov",
-                        "/videos/hero/telesin-1.mov",
-                        "/videos/hero/telesin-1.mov"
-    ]
 
     useEffect(() => {
         const el = carouselRef.current
@@ -37,6 +39,18 @@ export default function Hero() {
         el.addEventListener('wheel', onWheel, { passive: false} )
         return () => el.removeEventListener('wheel', onWheel)
     }, [])
+
+    useEffect(() => {
+        videoRefs.current.forEach((video, index) => {
+            if (!video) return
+            const distance = getCircularDistance(index, activeIndex, videoArray.length)
+            if (Math.abs(distance) !== 2) {
+                video.play()
+            } else {
+                video.pause()
+            }
+        })
+    }, [activeIndex])
 
     function getCircularDistance(index: number, activeIndex: number, length: number) {
         let distance = index - activeIndex
@@ -86,9 +100,14 @@ export default function Hero() {
                                         left: '50%'
                                     }}
                                 >
-                                    <video 
+                                    <video
+                                        ref={el => { videoRefs.current[index] = el}} 
                                         className="rounded-md"
-                                        src={video}>
+                                        src={video}
+                                        muted
+                                        loop
+                                        playsInline
+                                    >
                                     </video>
                                 </div>
                             )
