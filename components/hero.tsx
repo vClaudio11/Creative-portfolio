@@ -1,11 +1,14 @@
 'use client'
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Field } from "./ui/field"
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card"
+import { Button } from "./ui/button"
 
 export default function Hero() {
     const [activeIndex, setActiveIndex] = useState(0)
     const throttle = useRef(false)
+    const carouselRef = useRef<HTMLDivElement>(null)
 
     const videoArray = [ "/videos/hero/telesin-1.mov", 
                         "/videos/hero/telesin-1.mov",
@@ -13,18 +16,27 @@ export default function Hero() {
                         "/videos/hero/telesin-1.mov"
     ]
 
-    function handleWheel(e: React.WheelEvent<HTMLDivElement>) {
-        if (throttle.current === true) {
-            return 
-        } else {
-            setActiveIndex(prev => {
-                const newIndex = e.deltaY > 0 ? prev + 1 : prev - 1
-                return (newIndex + videoArray.length) % videoArray.length
-            })
-            throttle.current = true
-            setTimeout(() => {throttle.current = false}, 500)
+    useEffect(() => {
+        const el = carouselRef.current
+        if (!el) return
+
+        const onWheel = (e: WheelEvent) => {
+            e.preventDefault()
+            if (throttle.current === true) {
+                return 
+            } else {
+                setActiveIndex(prev => {
+                    const newIndex = e.deltaY > 0 ? prev + 1 : prev - 1
+                    return (newIndex + videoArray.length) % videoArray.length
+                })
+                throttle.current = true
+                setTimeout(() => {throttle.current = false}, 500)
+            }
         }
-    }
+
+        el.addEventListener('wheel', onWheel, { passive: false} )
+        return () => el.removeEventListener('wheel', onWheel)
+    }, [])
 
     function getCircularDistance(index: number, activeIndex: number, length: number) {
         let distance = index - activeIndex
@@ -38,27 +50,25 @@ export default function Hero() {
     }
     
     return(
-        <div className="h-screen flex flex-col">
-            {/* Nav bar */}
-            <div className="flex flex-row justify-center items-center text-center border-b-2">
-                <Field className="border-r-2 hover:cursor-pointer text-4xl py-8">Get in touch</Field>
-                <Field className="hover:cursor-pointer text-4xl py-8">My work</Field>
-            </div>
-            {/* Hero content */}
-            <div className="flex flex-row flex-1 w-full h-screen">
-                <Field className="flex flex-col justify-center items-center w-1/3 border-r-2">
-                    <h1 className="text-center text-2xl">Von Claudio</h1>
+        <div className="relative h-screen flex flex-col mx-8">
+            <div className="flex flex-col flex-1 justify-center items-center w-full h-screen">
+                {/* <div className="absolute top-12">
+                    <p className="text-center text-7xl uppercase font-semibold">Independant</p>
+                    <p className="text-center text-7xl uppercase font-semibold">cinematographer</p>
+                </div> */}
+                <Field>
+                    <h1 className="text-center text-4xl uppercase font-bold">Von Claudio</h1>
                     <p className="text-center">Social media creative delving into cinematography and storytelling</p>
-                    <a className="text-center underline hover:cursor-pointer">About me</a>
                 </Field>
-                <Field className="flex flex-col justify-center items-center w-2/3 px-8">
+                <Field className="justify-center items-center px-8">   
                     <div 
-                        onWheel={handleWheel}
+                        ref={carouselRef}
                         className="flex"
                         style={{
                             perspective: "1000px",
                             position: "relative",
-                            width: "500px"
+                            width: "600px",
+                            height: "300px"
                         }}
                     >
                         {videoArray.map((video, index) => {
@@ -70,13 +80,12 @@ export default function Hero() {
                                         transform: `translate(-50%, -50%) translateX(${Math.abs(distance) === 2 ? 0 : distance * 150}px) scale(${Math.abs(distance) === 0 ? 1.3 : 1 - (Math.abs(distance) / videoArray.length) + 0.15})`,
                                         opacity: `${Math.abs(distance) === 0 ? 1 : 1 - (Math.abs(distance) * 0.4)}`,
                                         zIndex: 10 - Math.abs(distance),
-                                        transition: 'all 0.5s ease-in-out',
+                                        transition: 'all 0.6s ease-in-out',
                                         position: 'absolute',
                                         top: '50%',
                                         left: '50%'
                                     }}
                                 >
-                                    
                                     <video 
                                         className="rounded-md"
                                         src={video}>
@@ -84,6 +93,31 @@ export default function Hero() {
                                 </div>
                             )
                         })}
+                    </div>              
+                </Field>
+                <Field>
+                    <p className="text-center text-xl uppercase">Worked with</p>
+                    <div className="flex flex-row justify-center items-center">
+                        <HoverCard>
+                            <HoverCardTrigger>
+                                <Button variant='link' className="text-center -mt-2">TELESIN</Button>
+                            </HoverCardTrigger>
+                            <HoverCardContent side="left">
+                                <p className="font-semibold">Collaboration with deliverables</p>
+                                <p>Full-control over planning, pre-production, shooting and editing with deliverables</p>
+                                <p className="mt-1 text-xs text-muted-foreground">Completed September 2025</p>
+                            </HoverCardContent>
+                        </HoverCard>
+                        <HoverCard>
+                            <HoverCardTrigger>
+                                <Button variant='link' className="text-center -mt-2">SANDMARC</Button>
+                            </HoverCardTrigger>
+                            <HoverCardContent side="right">
+                                <p className="font-semibold">Collaboration with deliverables</p>
+                                <p>Full-control over planning, pre-production, shooting and editing with deliverables</p>
+                                <p className="mt-1 text-xs text-muted-foreground">Completed October 2025</p>
+                            </HoverCardContent>
+                        </HoverCard>
                     </div>
                 </Field>
             </div>
