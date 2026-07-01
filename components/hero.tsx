@@ -55,13 +55,32 @@ export default function Hero() {
                     <div 
                         onWheel={handleWheel}
                         className="flex"
+                        style={{
+                            perspective: "1000px",
+                            position: "relative",
+                            width: "500px"
+                        }}
                     >
                         {videoArray.map((video, index) => {
                             const distance = getCircularDistance(index, activeIndex, videoArray.length)
                             return (
-                                <div key={index}>
-                                    <p>{distance}</p>
-                                    <video src={video}></video>
+                                <div 
+                                    key={index}
+                                    style={{
+                                        transform: `translate(-50%, -50%) translateX(${Math.abs(distance) === 2 ? 0 : distance * 150}px) scale(${Math.abs(distance) === 0 ? 1.3 : 1 - (Math.abs(distance) / videoArray.length) + 0.15})`,
+                                        opacity: `${Math.abs(distance) === 0 ? 1 : 1 - (Math.abs(distance) * 0.4)}`,
+                                        zIndex: 10 - Math.abs(distance),
+                                        transition: 'all 0.5s ease-in-out',
+                                        position: 'absolute',
+                                        top: '50%',
+                                        left: '50%'
+                                    }}
+                                >
+                                    
+                                    <video 
+                                        className="rounded-md"
+                                        src={video}>
+                                    </video>
                                 </div>
                             )
                         })}
