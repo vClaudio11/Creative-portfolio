@@ -120,6 +120,10 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    scrollbar-width: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Edge */
   }
   body {
     @apply bg-background text-foreground;
@@ -127,4 +131,25 @@
   html {
     @apply font-sans;
   }
+}
+
+@layer utilities {
+  .carousel-wrapper {
+    height: 230px;
+    width: 600px;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-wrapper {
+    height: 350px;
+    width: 600px;
+  }
+}
+
+  @media (min-width: 1024px) {
+    .carousel-wrapper {
+    height: 450px;
+    width: 600px;
+  }
+}
 }

@@ -32,20 +32,29 @@ export default function Work(){
         offset: ["start end", "end start"]
     })
 
-    const yTitle = useTransform(scrollTitle, [0, 1], [80, -80])
-    const y1 = useTransform(scroll1, [0, 1], [80, -80])
-    const y2 = useTransform(scroll2, [0, 1], [80, -80])
-    const y3 = useTransform(scroll3, [0, 1], [80, -80])
+    const yTitle = useTransform(scrollTitle, [0, 1], [40, -40])
+    const y1 = useTransform(scroll1, [0, 1], [40, -40])
+    const y2 = useTransform(scroll2, [0, 1], [40, -40])
+    const y3 = useTransform(scroll3, [0, 1], [40, -40])
 
     return(
-        <div className="relative min-h-screen">
+        <div className="relative min-h-[130vh] mt-6">
+            <div
+                className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+                style={{ 
+                    backgroundImage: "url('/photos/work-bg.jpg')",
+                    filter: "blur(5px) brightness(0.6)",
+                    transform: "scale(1.05)"  // ← prevents blur edges showing white
+                }}
+            >
+            </div>
             <motion.div
                 ref={refTitle}
                 style={{
                     y: yTitle
                 }}
             >
-                <p className="text-center text-4xl font-semibold uppercase">My work</p>
+                <p className="text-center text-4xl font-semibold uppercase pt-8 text-white">My work</p>
             </motion.div>
             <motion.div
                 ref={ref1}
@@ -60,7 +69,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                <Card className="mx-auto w-full max-w-sm pt-0 drop-shadow-xl/25">
+                <Card className="mx-auto w-full max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
@@ -93,7 +102,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >    
-                <Card className="mx-auto w-full max-w-sm pt-0 drop-shadow-xl/25">
+                <Card className="mx-auto w-full max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
@@ -117,7 +126,7 @@ export default function Work(){
                 ref={ref3}
                 style={{ transformOrigin: "center center", 
                         position: "absolute", 
-                        top: "80%", 
+                        top: "60%", 
                         left: "5%",
                         y: y3
                 }}
@@ -126,7 +135,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >    
-                <Card className="mx-auto w-full max-w-sm pt-0 drop-shadow-xl/25">
+                <Card className="mx-auto w-full max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}

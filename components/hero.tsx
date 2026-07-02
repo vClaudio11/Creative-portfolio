@@ -1,5 +1,7 @@
 'use client'
 
+
+import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import { Field } from "./ui/field"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card"
@@ -64,7 +66,7 @@ export default function Hero() {
     }
     
     return(
-        <div className="relative h-screen flex flex-col mx-8">
+        <div className="relative h-screen flex flex-col">
             <div className="flex flex-col flex-1 justify-center items-center w-full h-screen">
                 {/* <div className="absolute top-12">
                     <p className="text-center text-7xl uppercase font-semibold">Independant</p>
@@ -72,17 +74,15 @@ export default function Hero() {
                 </div> */}
                 <Field>
                     <h1 className="text-center text-4xl uppercase font-bold">Von Claudio</h1>
-                    <p className="text-center">Social media creative delving into cinematography and storytelling</p>
+                    <p className="text-center text-sm">Social media creative delving into cinematography and storytelling</p>
                 </Field>
                 <Field className="justify-center items-center px-8">   
                     <div 
                         ref={carouselRef}
-                        className="flex"
+                        className="flex carousel-wrapper"
                         style={{
                             perspective: "1000px",
-                            position: "relative",
-                            width: "600px",
-                            height: "300px"
+                            position: 'relative',
                         }}
                     >
                         {videoArray.map((video, index) => {
@@ -102,7 +102,7 @@ export default function Hero() {
                                 >
                                     <video
                                         ref={el => { videoRefs.current[index] = el}} 
-                                        className="rounded-md"
+                                        className="max-w-none w-[250px] md:w-[400px] lg:w-[550px] rounded-md"
                                         src={video}
                                         muted
                                         loop
