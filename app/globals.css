@@ -136,7 +136,7 @@
 @layer utilities {
   .carousel-wrapper {
     height: 230px;
-    width: 600px;
+    width: 300px;
   }
 
   @media (min-width: 768px) {
@@ -148,7 +148,7 @@
 
   @media (min-width: 1024px) {
     .carousel-wrapper {
-    height: 450px;
+    height: 480px;
     width: 600px;
   }
 }

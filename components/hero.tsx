@@ -73,8 +73,8 @@ export default function Hero() {
                     <p className="text-center text-7xl uppercase font-semibold">cinematographer</p>
                 </div> */}
                 <Field>
-                    <h1 className="text-center text-4xl uppercase font-bold">Von Claudio</h1>
-                    <p className="text-center text-sm">Social media creative delving into cinematography and storytelling</p>
+                    <h1 className="text-center text-4xl md:text-6xl lg:text-8xl uppercase font-bold">Von Claudio</h1>
+                    <p className="text-center text-xs md:text-sm lg:text-lg">Social media creative delving into cinematography and storytelling</p>
                 </Field>
                 <Field className="justify-center items-center px-8">   
                     <div 
@@ -102,7 +102,7 @@ export default function Hero() {
                                 >
                                     <video
                                         ref={el => { videoRefs.current[index] = el}} 
-                                        className="max-w-none w-[250px] md:w-[400px] lg:w-[550px] rounded-md"
+                                        className="max-w-none w-[250px] md:w-[400px] lg:w-[500px] rounded-md"
                                         src={video}
                                         muted
                                         loop
@@ -115,7 +115,7 @@ export default function Hero() {
                     </div>              
                 </Field>
                 <Field>
-                    <p className="text-center text-xl uppercase">Worked with</p>
+                    <p className="text-center text-xl md:text-2xl lg:text-3xl uppercase font-bold">Worked with</p>
                     <div className="flex flex-row justify-center items-center">
                         <HoverCard>
                             <HoverCardTrigger>
