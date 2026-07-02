@@ -6,8 +6,9 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 
 export default function Work(){
     return(
-        <div className="min-h-screen flex flex-col">
-            <Card className="relative mx-auto w-full max-w-sm pt-0">
+        <div className="relative min-h-screen">
+            <p className="text-center text-4xl font-semibold uppercase">My work</p>
+            <Card className="absolute top-[10%] left-[5%] mx-auto w-full max-w-sm pt-0">
                 <div className="inset-0 z-30 aspect-video">
                     <Image 
                         width={600}
@@ -24,9 +25,9 @@ export default function Work(){
                     <CardTitle>TELESIN</CardTitle>
                     <CardDescription>master grip collaboration</CardDescription>
                 </CardHeader>
-                <CardContent>My first ever brand deal / collaboration, with full control over the pitch, pre-production, shooting and editing. Using the TELESIN master grip and the help of a friend, I filmed this collaboration video in the center of Kuala Lumpur Malaysia. The video now has over 20k views on TikTok and growing. The deal was an exchange of gear for content deliverables which included 1x video and an assisting story promotion.</CardContent>
+                <CardContent>My first ever brand deal / collaboration with full control over the pitch, pre-production, shooting and editing. Using the TELESIN master grip and the help of a friend, I filmed this collaboration video in the center of Kuala Lumpur Malaysia. The video now has over 20k views on TikTok and growing. The deal was an exchange of gear for content deliverables which included 1x video and an assisting story promotion.</CardContent>
             </Card>
-            <Card className="relative mx-auto w-full max-w-sm pt-0">
+            <Card className="absolute top-[40%] right-[5%] mx-auto w-full max-w-sm pt-0">
                 <div className="inset-0 z-30 aspect-video">
                     <Image 
                         width={600}
@@ -43,9 +44,9 @@ export default function Work(){
                     <CardTitle>TELESIN</CardTitle>
                     <CardDescription>fog machine collaboration</CardDescription>
                 </CardHeader>
-                <CardContent>Another collaboration deal with TELESIN with the same full control over the entire project. I pitched the video idea to them and independantly filmed and edited the whole shoot within my room, using the Fog machine itself to create that cinematic grain built into the footage.</CardContent>
+                <CardContent>Another collaboration deal with TELESIN with the same control over the entire project. I pitched the video idea to them, independantly filmed and edited the whole shoot within my room, using the Fog machine itself to create that cinematic grain built into the footage.</CardContent>
             </Card>
-            <Card className="relative mx-auto w-full max-w-sm pt-0">
+            <Card className="absolute top-[80%] left-[5%] mx-auto w-full max-w-sm pt-0">
                 <div className="inset-0 z-30 aspect-video">
                     <Image 
                         width={600}
