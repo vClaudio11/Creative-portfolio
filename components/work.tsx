@@ -32,19 +32,19 @@ export default function Work(){
         offset: ["start end", "end start"]
     })
 
-    const yTitle = useTransform(scrollTitle, [0, 1], [40, -40])
+    const yTitle = useTransform(scrollTitle, [0, 1], [30, -40])
     const y1 = useTransform(scroll1, [0, 1], [40, -40])
     const y2 = useTransform(scroll2, [0, 1], [40, -40])
     const y3 = useTransform(scroll3, [0, 1], [40, -40])
 
     return(
-        <div className="relative min-h-[130vh] mt-6">
+        <div className="relative min-h-[170vh] md:min-h-[150vh] lg:min-h-[160vh]">
             <div
                 className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
                 style={{ 
                     backgroundImage: "url('/photos/work-bg.jpg')",
                     filter: "blur(5px) brightness(0.6)",
-                    transform: "scale(1.05)"  // ← prevents blur edges showing white
+                    transform: "scaleX(1.05)"  // ← prevents blur edges showing white
                 }}
             >
             </div>
@@ -54,14 +54,12 @@ export default function Work(){
                     y: yTitle
                 }}
             >
-                <p className="text-center text-4xl font-semibold uppercase pt-8 text-white">My work</p>
+                <p className="text-center text-4xl font-semibold uppercase pt-16 text-white">My work</p>
             </motion.div>
             <motion.div
                 ref={ref1}
+                className="flex md:absolute md:top-[12%] md:left-[5%] lg:left-[8%] lg:scale-[1.2]"
                 style={{ transformOrigin: "center center", 
-                        position: "absolute", 
-                        top: "10%", 
-                        left: "5%",
                         y: y1
                 }}
                 initial={{ scale: 0.95, opacity: 0.4, filter: "brightness(0.4)" }}
@@ -69,7 +67,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                <Card className="mx-auto w-full max-w-sm pt-0">
+                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[500px] max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
@@ -91,10 +89,8 @@ export default function Work(){
             </motion.div>
             <motion.div
             ref={ref2}
+            className="flex md:absolute md:top-[42%] md:right-[5%] lg:right-[8%] lg:scale-[1.2]"
                 style={{ transformOrigin: "center center", 
-                        position: "absolute", 
-                        top: "40%", 
-                        right: "5%",
                         y: y2
                 }}
                 initial={{ scale: 0.95, opacity: 0.4, filter: "brightness(0.4)" }}
@@ -102,7 +98,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >    
-                <Card className="mx-auto w-full max-w-sm pt-0">
+                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[500px] max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
@@ -124,10 +120,8 @@ export default function Work(){
             </motion.div>
             <motion.div
                 ref={ref3}
+                className="flex md:absolute md:top-[62%] md:left-[5%] lg:left-[8%] lg:scale-[1.2]"
                 style={{ transformOrigin: "center center", 
-                        position: "absolute", 
-                        top: "60%", 
-                        left: "5%",
                         y: y3
                 }}
                 initial={{ scale: 0.95, opacity: 0.4, filter: "brightness(0.4)" }}
@@ -135,7 +129,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >    
-                <Card className="mx-auto w-full max-w-sm pt-0">
+                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[500px] max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}

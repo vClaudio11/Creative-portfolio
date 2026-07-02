@@ -8,9 +8,9 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card"
 import { Button } from "./ui/button"
 
 const videoArray = [ "/videos/hero/telesin-1.mov", 
-                    "/videos/hero/telesin-1.mov",
-                    "/videos/hero/telesin-1.mov",
-                    "/videos/hero/telesin-1.mov"
+                    "/videos/hero/telesin-2.mov",
+                    "/videos/hero/personal-1.mov",
+                    "/videos/hero/sandmarc-1.mov"
 ]
 
 export default function Hero() {
