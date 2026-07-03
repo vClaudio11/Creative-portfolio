@@ -128,8 +128,8 @@ export default function Hero() {
                         <p className="text-center text-7xl uppercase font-semibold">cinematographer</p>
                     </div> */}
                     <div>
-                        <h1 className="text-center text-4xl md:text-6xl lg:text-8xl uppercase font-bold">Von Claudio</h1>
-                        <p className='text-center text-[0.8rem] px-14 md:text-sm md:px-30 lg:text-[1.1rem] lg:px-40'>Based in the Philippines | Experienced in creative-directing, cinematic shooting & Davinci resolve editing </p>
+                        <h1 className="text-center text-4xl md:text-6xl lg:text-6xl uppercase font-bold">Von Claudio</h1>
+                        <p className='text-center text-[0.8rem] px-14 md:text-sm md:px-30 lg:text-[0.9rem] lg:px-60'>Based in the Philippines | Experienced in creative-directing, cinematic shooting & Davinci resolve editing </p>
                     </div>
                     <Field className="justify-center items-center px-8">   
                         <div 
@@ -159,7 +159,7 @@ export default function Hero() {
                                             <p className="text-center text-xs/snug md:text-xs/snug lg:text-sm/snug mb-1 uppercase">{video.header}</p>
                                             <video
                                                 ref={el => { videoRefs.current[index] = el}} 
-                                                className="max-w-none w-[250px] md:w-[400px] lg:w-[500px] rounded-md"
+                                                className="max-w-none w-[250px] md:w-[360px] lg:w-[420px] rounded-md"
                                                 src={video.video}
                                                 muted
                                                 loop

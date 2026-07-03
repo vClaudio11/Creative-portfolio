@@ -1,11 +1,12 @@
 'use client'
 
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
 
 export default function About() {
     const aboutRef = useRef(null)
+    const containerRef = useRef(null)
     const ref1 = useRef(null)
     const ref2 = useRef(null)
     const ref3 = useRef(null)
@@ -15,12 +16,26 @@ export default function About() {
     const ref7 = useRef(null)
     const ref8 = useRef(null)
 
-    const { scrollYProgress: scrollAbout} = useScroll({
-        target: aboutRef,
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
         offset: ["start end", "end start"]
     })
 
-    const yAbout = useTransform(scrollAbout, [0, 1], [20, -20])
+    const smoothProgress = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 45,
+        restDelta: 0.001
+    })
+
+    const yAbout = useTransform(smoothProgress, [0, 1], [20, -20])
+    const y1 = useTransform(smoothProgress, [0, 1], [100, -100])
+    const y2 = useTransform(smoothProgress, [0, 1], [60, -60])
+    const y3 = useTransform(smoothProgress, [0, 1], [-60, 60])
+    const y4 = useTransform(smoothProgress, [0, 1], [80, -80])
+    const y5 = useTransform(smoothProgress, [0, 1], [100, -100])
+    const y6 = useTransform(smoothProgress, [0, 1], [90, -90])
+    const y7 = useTransform(smoothProgress, [0, 1], [-90, 90])
+    const y8 = useTransform(smoothProgress, [0, 1], [100, -100])
     
     return(
         <div className="flex flex-col justify-center items-center h-screen">
@@ -36,71 +51,120 @@ export default function About() {
                 <p className="text-center md:text-xs">Born in the Philippines, but raised in the Middle East (Qatar), I grew up in the same city for 17 years before coming back home to Philippines. Shortly after that I completed my foundation couse in Malaysia Kuala Lumpur where I first picked up a camera.</p>
                 <p className="text-center md:text-xs mt-2">More than a year later I have now made over 60 videos, each experimenting different techniques and applying compounding knowledge to get to where I am now. I now heavily focus on cinematic shot taking, with attention to video sound design and pacing.</p>
             </div>
-                <div className="absolute inset-0 w-full pointer-events-none">
-                    <Image
+                <div ref={containerRef} className="absolute inset-0 w-full pointer-events-none">
+                    <motion.div
                         ref={ref1} 
-                        width={600}
-                        height={338}
-                        className='absolute top-[5%] left-[9%] object-cover -z-10 md:w-70 ' 
-                        src='/photos/about/3.jpg' 
-                        alt='picture people running'
-                    />
-                    <Image 
-                        ref={ref2}
-                        width={600}
-                        height={338}
-                        className='absolute top-[73%] left-[12%] object-cover -z-10 md:w-55 ' 
-                        src='/photos/about/2.jpg' 
-                        alt='picture someone writing'
-                    />
-                    <Image
+                        style={{
+                            y: y1
+                        }}
+                        className='absolute top-[5%] left-[9%] object-cover -z-10 md:w-70 drop-shadow-xl/25' 
+                    >
+                        <Image
+                            width={600}
+                            height={338}
+                            src='/photos/about/3.jpg' 
+                            alt='picture people running'
+                        />
+                    </motion.div>
+                    <motion.div
+                        ref={ref2} 
+                        style={{
+                            y: y2
+                        }}
+                        className='absolute top-[73%] left-[12%] object-cover -z-10 md:w-55 drop-shadow-xl/25' 
+                    >
+                        <Image 
+                            ref={ref2}
+                            width={600}
+                            height={338}
+                            src='/photos/about/2.jpg' 
+                            alt='picture someone writing'
+                        />
+                    </motion.div>
+                    <motion.div
                         ref={ref3} 
-                        width={600}
-                        height={338}
-                        className='absolute top-[10%] right-[10%] object-cover -z-10 md:w-60 ' 
-                        src='/photos/about/1.jpg' 
-                        alt='picture of finger on map'
-                    />
-                    <Image
+                        style={{
+                            y: y3
+                        }}
+                        className='absolute top-[10%] right-[10%] object-cover -z-10 md:w-60 drop-shadow-xl/25' 
+                    >
+                        <Image
+                            width={600}
+                            height={338}
+                            src='/photos/about/1.jpg' 
+                            alt='picture of finger on map'
+                        />
+                    </motion.div>
+                    <motion.div
                         ref={ref4} 
-                        width={600}
-                        height={338}
-                        className='absolute top-[77%] right-[8%] object-cover -z-10 md:w-65 ' 
-                        src='/photos/about/5.jpg' 
-                        alt='picture the middle of a street'
-                    />
-                    <Image
+                        style={{
+                            y: y4
+                        }}
+                        className='absolute top-[77%] right-[8%] object-cover -z-10 md:w-65 shadow-2xl ' 
+                    >
+                        <Image
+                            width={600}
+                            height={338}
+                            src='/photos/about/5.jpg' 
+                            alt='picture the middle of a street'
+                        />
+                    </motion.div>
+                    <motion.div
                         ref={ref5} 
-                        width={600}
-                        height={338}
-                        className='absolute top-[54%] right-[5%] object-cover -z-10 md:w-45 ' 
-                        src='/photos/about/9.jpg' 
-                        alt='picture someone staring out'
-                    />
-                    <Image
+                        style={{
+                            y: y5
+                        }}
+                        className='absolute top-[54%] right-[5%] object-cover -z-10 md:w-45 drop-shadow-xl/25' 
+                    >
+                        <Image
+                            width={600}
+                            height={338}
+                            src='/photos/about/9.jpg' 
+                            alt='picture someone staring out'
+                        />
+                    </motion.div>
+                    <motion.div
                         ref={ref6} 
-                        width={600}
-                        height={338}
-                        className='absolute top-[30%] left-[5%] object-cover -z-10 md:w-50 ' 
-                        src='/photos/about/6.jpg' 
-                        alt='picture of someone putting down a photo'
-                    />
-                    <Image
+                        style={{
+                            y: y6
+                        }}
+                        className='absolute top-[30%] left-[5%] object-cover -z-10 md:w-50 drop-shadow-xl/25' 
+                    >
+                        <Image
+                            width={600}
+                            height={338}
+                            src='/photos/about/6.jpg' 
+                            alt='picture of someone putting down a photo'
+                        />
+                    </motion.div>
+                    <motion.div
                         ref={ref7} 
-                        width={600}
-                        height={338}
-                        className='absolute top-[54%] left-[7%] object-cover -z-10 md:w-45 ' 
-                        src='/photos/about/7.jpg' 
-                        alt='picture someone walking down a street'
-                    />
-                    <Image
+                        style={{
+                            y: y7
+                        }}
+                        className='absolute top-[54%] left-[6%] object-cover -z-20 md:w-45 drop-shadow-xl/25' 
+                    >
+                        <Image
+                            width={600}
+                            height={338}
+                            src='/photos/about/7.jpg' 
+                            alt='picture someone walking down a street'
+                        />
+                    </motion.div>
+                    <motion.div
                         ref={ref8} 
-                        width={600}
-                        height={338}
-                        className='absolute top-[32%] right-[6%] object-cover -z-10 md:w-50 ' 
-                        src='/photos/about/4.jpg' 
-                        alt='picture someone in front of light rays'
-                    />
+                        style={{
+                            y: y8
+                        }}
+                        className='absolute top-[32%] right-[6%] object-cover -z-20 md:w-50 drop-shadow-xl/25' 
+                    >
+                        <Image
+                            width={600}
+                            height={338}
+                            src='/photos/about/4.jpg' 
+                            alt='picture someone in front of light rays'
+                        />
+                    </motion.div>
                 </div>
             </motion.div>
         </div>
