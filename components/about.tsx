@@ -47,9 +47,9 @@ export default function About() {
                 className="relative flex flex-col items-center justify-center w-full h-full max-w-4xl"
             >   
             <div className="z-10 md:w-60">
-                <p className="text-center text-4xl font-semibold uppercase pt-16">About me</p>
-                <p className="text-center md:text-xs">Born in the Philippines, but raised in the Middle East (Qatar), I grew up in the same city for 17 years before coming back home to Philippines. Shortly after that I completed my foundation couse in Malaysia Kuala Lumpur where I first picked up a camera.</p>
-                <p className="text-center md:text-xs mt-2">More than a year later I have now made over 60 videos, each experimenting different techniques and applying compounding knowledge to get to where I am now. I now heavily focus on cinematic shot taking, with attention to video sound design and pacing.</p>
+                <p className="text-center text-xl md:text-2xl lg:text-4xl font-semibold uppercase pt-16">About me</p>
+                <p className="text-center text-xs px-28 md:text-xs md:px-0">Born in the Philippines, but raised in the Middle East (Qatar), I grew up in the same city for 17 years before coming back home to Philippines. Shortly after that I completed my foundation couse in Malaysia Kuala Lumpur where I first picked up a camera.</p>
+                <p className="text-center text-xs px-28 md:text-xs md:px-0 mt-2">More than a year later I have now made over 60 videos, each experimenting different techniques and applying compounding knowledge to get to where I am now. I now heavily focus on cinematic shot taking, with attention to video sound design and pacing.</p>
             </div>
                 <div ref={containerRef} className="absolute inset-0 w-full pointer-events-none">
                     <motion.div
@@ -57,7 +57,7 @@ export default function About() {
                         style={{
                             y: y1
                         }}
-                        className='absolute top-[5%] left-[9%] object-cover -z-10 md:w-70 drop-shadow-xl/25' 
+                        className='absolute top-[15%] left-[9%] md:top-[10%] md:left-[14%] object-cover -z-10 w-30 md:w-60 drop-shadow-xl/25' 
                     >
                         <Image
                             width={600}
@@ -71,7 +71,7 @@ export default function About() {
                         style={{
                             y: y2
                         }}
-                        className='absolute top-[73%] left-[12%] object-cover -z-10 md:w-55 drop-shadow-xl/25' 
+                        className='absolute top-[88%] left-[6%] md:top-[78%] md:left-[12%] object-cover -z-10 w-40 md:w-50 drop-shadow-xl/25' 
                     >
                         <Image 
                             ref={ref2}
@@ -86,7 +86,7 @@ export default function About() {
                         style={{
                             y: y3
                         }}
-                        className='absolute top-[10%] right-[10%] object-cover -z-10 md:w-60 drop-shadow-xl/25' 
+                        className='absolute top-[10%] right-[9%] md:top-[10%] md:right-[12%] object-cover -z-10 w-35 md:w-55 drop-shadow-xl/25' 
                     >
                         <Image
                             width={600}
@@ -100,7 +100,7 @@ export default function About() {
                         style={{
                             y: y4
                         }}
-                        className='absolute top-[77%] right-[8%] object-cover -z-10 md:w-65 shadow-2xl ' 
+                        className='absolute top-[86%] right-[6%] md:top-[80%] md:right-[8%] object-cover -z-10 w-40 md:w-65 shadow-2xl ' 
                     >
                         <Image
                             width={600}
@@ -114,7 +114,7 @@ export default function About() {
                         style={{
                             y: y5
                         }}
-                        className='absolute top-[54%] right-[5%] object-cover -z-10 md:w-45 drop-shadow-xl/25' 
+                        className='absolute top-[62%] left-[4%] md:top-[56%] md:right-[5%] object-cover -z-10 w-25 md:w-40 drop-shadow-xl/25' 
                     >
                         <Image
                             width={600}
@@ -128,7 +128,7 @@ export default function About() {
                         style={{
                             y: y6
                         }}
-                        className='absolute top-[30%] left-[5%] object-cover -z-10 md:w-50 drop-shadow-xl/25' 
+                        className='absolute top-[35%] left-[4%] md:top-[34%] md:left-[6%] object-cover -z-10 w-22 md:w-40 drop-shadow-xl/25' 
                     >
                         <Image
                             width={600}
@@ -142,7 +142,7 @@ export default function About() {
                         style={{
                             y: y7
                         }}
-                        className='absolute top-[54%] left-[6%] object-cover -z-20 md:w-45 drop-shadow-xl/25' 
+                        className='absolute top-[58%] right-[3%] md:top-[54%] md:right-[4%] object-cover -z-20 w-25 md:w-50 drop-shadow-xl/25' 
                     >
                         <Image
                             width={600}
@@ -156,7 +156,7 @@ export default function About() {
                         style={{
                             y: y8
                         }}
-                        className='absolute top-[32%] right-[6%] object-cover -z-20 md:w-50 drop-shadow-xl/25' 
+                        className='absolute top-[30%] right-[3%] md:top-[34%] md:right-[6%] object-cover -z-20 w-25 md:w-50 drop-shadow-xl/25' 
                     >
                         <Image
                             width={600}

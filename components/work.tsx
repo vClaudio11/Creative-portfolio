@@ -38,7 +38,7 @@ export default function Work(){
     const y3 = useTransform(scroll3, [0, 1], [40, -40])
 
     return(
-        <div className="relative min-h-[170vh] md:min-h-[150vh] lg:min-h-[180vh]">
+        <div className="relative min-h-[170vh] md:min-h-[150vh] lg:min-h-[120vh]">
             <div
                 className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
                 style={{ 
@@ -59,7 +59,7 @@ export default function Work(){
             </motion.div>
             <motion.div
                 ref={ref1}
-                className="flex md:absolute md:top-[12%] md:left-[5%] lg:left-[8%] lg:scale-[1.2]"
+                className="flex md:absolute md:top-[25%] md:left-[5%] lg:left-[8%]"
                 style={{ transformOrigin: "center center", 
                         y: y1
                 }}
@@ -68,7 +68,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[500px] max-w-sm pt-0">
+                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[300px] max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
@@ -85,12 +85,12 @@ export default function Work(){
                         <CardTitle>TELESIN</CardTitle>
                         <CardDescription>master grip collaboration</CardDescription>
                     </CardHeader>
-                    <CardContent>My first ever brand deal / collaboration with full control over the pitch, pre-production, shooting and editing. Using the TELESIN master grip and the help of a friend, I filmed this collaboration video in the center of Kuala Lumpur Malaysia. The video now has over 20k views on TikTok and growing. The deal was an exchange of gear for content deliverables which included 1x video and an assisting story promotion.</CardContent>
+                    <CardContent>My first ever brand deal with full control over the pitch, pre-production, shooting and editing. Using the TELESIN master grip and the help of a friend, I filmed this collaboration video in the center of Kuala Lumpur Malaysia. The video now has over 20k views on TikTok and growing. The deal was an exchange of gear for content deliverables which included 1x video and an assisting story promotion.</CardContent>
                 </Card>
             </motion.div>
             <motion.div
             ref={ref2}
-            className="flex md:absolute md:top-[42%] md:right-[5%] lg:right-[8%] lg:scale-[1.2]"
+            className="flex md:absolute md:top-[25%] md:right-[5%] lg:right-[8%]"
                 style={{ transformOrigin: "center center", 
                         y: y2
                 }}
@@ -99,7 +99,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >    
-                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[500px] max-w-sm pt-0">
+                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[300px] max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
@@ -121,7 +121,7 @@ export default function Work(){
             </motion.div>
             <motion.div
                 ref={ref3}
-                className="flex md:absolute md:top-[62%] md:left-[5%] lg:left-[8%] lg:scale-[1.2]"
+                className="flex md:absolute md:top-[25%] md:left-[5%] lg:left-[38.5%]"
                 style={{ transformOrigin: "center center", 
                         y: y3
                 }}
@@ -130,7 +130,7 @@ export default function Work(){
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >    
-                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[500px] max-w-sm pt-0">
+                <Card className="mx-auto w-[320px] md:w-[320px] lg:w-[300px] max-w-sm pt-0">
                     <div className="inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
