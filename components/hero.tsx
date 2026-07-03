@@ -6,7 +6,6 @@ import { Field } from "./ui/field"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card"
 import { Button } from "./ui/button"
 import { motion, useScroll, useTransform } from "framer-motion"
-import Image from 'next/image';
 
 const videoArray = [ {video: "/videos/hero/telesin-1.mov", footer: "Kuala Lumpur | September 2025", header: "TELESIN Brand collaboration"}, 
                     {video: "/videos/hero/telesin-2.mov", footer: "PHILIPPINES | March 2026", header: "TELESIN Brand collaboration"},
@@ -128,7 +127,7 @@ export default function Hero() {
                         <p className="text-center text-7xl uppercase font-semibold">Independant</p>
                         <p className="text-center text-7xl uppercase font-semibold">cinematographer</p>
                     </div> */}
-                    <div className=''>
+                    <div>
                         <h1 className="text-center text-4xl md:text-6xl lg:text-8xl uppercase font-bold">Von Claudio</h1>
                         <p className='text-center text-[0.8rem] px-14 md:text-sm md:px-30 lg:text-[1.1rem] lg:px-40'>Based in the Philippines | Experienced in creative-directing, cinematic shooting & Davinci resolve editing </p>
                     </div>
@@ -195,7 +194,7 @@ export default function Hero() {
                         <p className="text-center text-xl md:text-2xl lg:text-3xl uppercase font-bold">Worked with</p>
                         <div className="flex flex-row justify-center items-center">
                             <HoverCard>
-                                <HoverCardTrigger>
+                                <HoverCardTrigger delay={10} closeDelay={100}>
                                     <Button variant='link' className="text-center -mt-2">TELESIN</Button>
                                 </HoverCardTrigger>
                                 <HoverCardContent side="left">
