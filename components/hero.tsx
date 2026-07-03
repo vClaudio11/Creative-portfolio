@@ -49,6 +49,33 @@ export default function Hero() {
         return () => el.removeEventListener('wheel', onWheel)
     }, [])
 
+    // if on mobile then use arrows to navigate
+    function handleLeft() {
+        if (throttle.current === true) {
+            return 
+        } else {
+            setActiveIndex(prev => {
+                const newIndex = prev - 1
+                return (newIndex + videoArray.length) % videoArray.length
+            })
+            throttle.current = true
+            setTimeout(() => {throttle.current = false}, 500)
+        }
+    }
+
+    function handleRight() {
+        if (throttle.current === true) {
+            return 
+        } else {
+            setActiveIndex(prev => {
+                const newIndex = prev + 1
+                return (newIndex + videoArray.length) % videoArray.length
+            })
+            throttle.current = true
+            setTimeout(() => {throttle.current = false}, 500)
+        }
+    }
+
     useEffect(() => {
         videoRefs.current.forEach((video, index) => {
             if (!video) return
@@ -113,22 +140,38 @@ export default function Hero() {
                                             left: '50%'
                                         }}
                                     >
-                                        <p className="text-center text-xs/snug md:text-xs/snug lg:text-sm/snug mb-1 uppercase">{video.header}</p>
-                                        <video
-                                            ref={el => { videoRefs.current[index] = el}} 
-                                            className="max-w-none w-[250px] md:w-[400px] lg:w-[500px] rounded-md"
-                                            src={video.video}
-                                            muted
-                                            loop
-                                            playsInline
-                                        >
-                                        </video>
-                                        <p className="text-center text-xs/snug md:text-xs/snug lg:text-sm/snug mt-1 uppercase">{video.footer}</p>
+                                        <div>
+                                            <p className="text-center text-xs/snug md:text-xs/snug lg:text-sm/snug mb-1 uppercase">{video.header}</p>
+                                            <video
+                                                ref={el => { videoRefs.current[index] = el}} 
+                                                className="max-w-none w-[250px] md:w-[400px] lg:w-[500px] rounded-md"
+                                                src={video.video}
+                                                muted
+                                                loop
+                                                playsInline
+                                            >
+                                            </video>
+                                            <p className="text-center text-xs/snug md:text-xs/snug lg:text-sm/snug mt-1 uppercase">{video.footer}</p>
+                                        </div>
                                     </div>
                                 )
                             })}
                         </div>              
                     </Field>
+                    <Button 
+                        onClick={handleLeft}
+                        className="sm:hidden absolute top-[50%] left-[12%] z-10 text-white scale-[2] -rotate-180" 
+                        variant="link" 
+                        size="icon-lg">
+                        <CircleArrowRight />
+                    </Button>
+                    <Button
+                        onClick={handleRight} 
+                        className="sm:hidden absolute top-[50%] right-[12%] z-10 text-white scale-[2]" 
+                        variant="link" 
+                        size="icon-lg">
+                        <CircleArrowRight />
+                    </Button>
                     <Field>
                         <p className="text-center text-xl md:text-2xl lg:text-3xl uppercase font-bold">Worked with</p>
                         <div className="flex flex-row justify-center items-center">

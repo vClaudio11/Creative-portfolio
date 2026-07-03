@@ -139,11 +139,12 @@
     width: 300px;
   }
 
+  
   @media (min-width: 768px) {
     .carousel-wrapper {
-    height: 420px;
-    width: 600px;
-  }
+      height: 420px;
+      width: 600px;
+    }
 }
 
   @media (min-width: 1024px) {
