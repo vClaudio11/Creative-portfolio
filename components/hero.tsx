@@ -6,6 +6,7 @@ import { Field } from "./ui/field"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card"
 import { Button } from "./ui/button"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Image from 'next/image';
 
 const videoArray = [ {video: "/videos/hero/telesin-1.mov", footer: "Kuala Lumpur | September 2025", header: "TELESIN Brand collaboration"}, 
                     {video: "/videos/hero/telesin-2.mov", footer: "PHILIPPINES | March 2026", header: "TELESIN Brand collaboration"},
@@ -44,9 +45,24 @@ export default function Hero() {
                 setTimeout(() => {throttle.current = false}, 500)
             }
         }
-
+        
+        
         el.addEventListener('wheel', onWheel, { passive: false} )
-        return () => el.removeEventListener('wheel', onWheel)
+        return () => {
+            el.removeEventListener('wheel', onWheel);
+        };
+    }, [])
+    
+    useEffect(() => {
+
+        const videoInterval = setInterval(() => {
+            setActiveIndex(prev => {
+                const newIndex = prev + 1
+                return (newIndex + videoArray.length) % videoArray.length
+            })
+        }, 4000)
+
+        return () => clearInterval(videoInterval)
     }, [])
 
     // if on mobile then use arrows to navigate
@@ -112,10 +128,10 @@ export default function Hero() {
                         <p className="text-center text-7xl uppercase font-semibold">Independant</p>
                         <p className="text-center text-7xl uppercase font-semibold">cinematographer</p>
                     </div> */}
-                    <Field>
+                    <div className=''>
                         <h1 className="text-center text-4xl md:text-6xl lg:text-8xl uppercase font-bold">Von Claudio</h1>
-                        <p className="text-center text-sm md:text-sm lg:text-lg">Social media creative delving into cinematography and storytelling</p>
-                    </Field>
+                        <p className='text-center text-[0.8rem] px-14 md:text-sm md:px-30 lg:text-[1.1rem] lg:px-40'>Based in the Philippines | Experienced in creative-directing, cinematic shooting & Davinci resolve editing </p>
+                    </div>
                     <Field className="justify-center items-center px-8">   
                         <div 
                             ref={carouselRef}
@@ -158,6 +174,8 @@ export default function Hero() {
                             })}
                         </div>              
                     </Field>
+
+                    {/* Render only on mobile screens */}
                     <Button 
                         onClick={handleLeft}
                         className="sm:hidden absolute top-[50%] left-[12%] z-10 text-white scale-[2] -rotate-180" 
@@ -172,6 +190,7 @@ export default function Hero() {
                         size="icon-lg">
                         <CircleArrowRight />
                     </Button>
+
                     <Field>
                         <p className="text-center text-xl md:text-2xl lg:text-3xl uppercase font-bold">Worked with</p>
                         <div className="flex flex-row justify-center items-center">
@@ -180,16 +199,23 @@ export default function Hero() {
                                     <Button variant='link' className="text-center -mt-2">TELESIN</Button>
                                 </HoverCardTrigger>
                                 <HoverCardContent side="left">
+                                    <span>
+                                        <img 
+                                            className='lg:w-full'
+                                            src='/photos/telesin-logo.jpeg'
+                                            alt='telesin logo'
+                                        />
+                                    </span>
                                     <p className="font-semibold">Collaboration with deliverables</p>
                                     <p>Full-control over planning, pre-production, shooting and editing with deliverables</p>
-                                    <p className="mt-1 text-xs text-muted-foreground">Completed September 2025</p>
+                                    <p className="mt-1 text-xs text-muted-foreground">Completed September 2025 & March 2026</p>
                                 </HoverCardContent>
                             </HoverCard>
                             <HoverCard>
                                 <HoverCardTrigger>
                                     <Button variant='link' className="text-center -mt-2">SANDMARC</Button>
                                 </HoverCardTrigger>
-                                <HoverCardContent side="right">
+                                <HoverCardContent side="bottom">
                                     <p className="font-semibold">Collaboration with deliverables</p>
                                     <p>Full-control over planning, pre-production, shooting and editing with deliverables</p>
                                     <p className="mt-1 text-xs text-muted-foreground">Completed October 2025</p>

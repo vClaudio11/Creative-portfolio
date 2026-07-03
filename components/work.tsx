@@ -55,6 +55,7 @@ export default function Work(){
                 }}
             >
                 <p className="text-center text-4xl font-semibold uppercase pt-16 text-white">My work</p>
+                <p className="text-center text-sm md:text-sm lg:text-lg text-white">Video creative delving into cinematography and storytelling</p>
             </motion.div>
             <motion.div
                 ref={ref1}
