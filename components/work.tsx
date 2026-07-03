@@ -38,7 +38,7 @@ export default function Work(){
     const y3 = useTransform(scroll3, [0, 1], [40, -40])
 
     return(
-        <div className="relative min-h-[170vh] md:min-h-[150vh] lg:min-h-[160vh]">
+        <div className="relative min-h-[170vh] md:min-h-[150vh] lg:min-h-[180vh]">
             <div
                 className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
                 style={{ 

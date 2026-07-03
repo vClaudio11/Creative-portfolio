@@ -135,20 +135,20 @@
 
 @layer utilities {
   .carousel-wrapper {
-    height: 230px;
+    height: 300px;
     width: 300px;
   }
 
   @media (min-width: 768px) {
     .carousel-wrapper {
-    height: 350px;
+    height: 420px;
     width: 600px;
   }
 }
 
   @media (min-width: 1024px) {
     .carousel-wrapper {
-    height: 480px;
+    height: 500px;
     width: 600px;
   }
 }
