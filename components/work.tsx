@@ -38,7 +38,7 @@ export default function Work(){
     const y3 = useTransform(scroll3, [0, 1], [40, -40])
 
     return(
-        <div className="relative min-h-[170vh] md:min-h-[150vh] lg:min-h-[120vh]">
+        <div className="relative min-h-[210vh] md:min-h-[150vh] lg:min-h-[120vh]">
             <div
                 className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
                 style={{ 
@@ -55,7 +55,7 @@ export default function Work(){
                 }}
             >
                 <p className="text-center text-4xl font-semibold uppercase pt-16 text-white">My work</p>
-                <p className="text-center text-sm md:text-sm lg:text-lg text-white">Video creative delving into cinematography and storytelling</p>
+                <p className="text-center text-sm px-8 md:text-sm lg:text-lg text-white">Video creative delving into cinematography and storytelling</p>
             </motion.div>
             <motion.div
                 ref={ref1}
@@ -85,7 +85,7 @@ export default function Work(){
                         <CardTitle>TELESIN</CardTitle>
                         <CardDescription>master grip collaboration</CardDescription>
                     </CardHeader>
-                    <CardContent>My first ever brand deal with full control over the pitch, pre-production, shooting and editing. Using the TELESIN master grip and the help of a friend, I filmed this collaboration video in the center of Kuala Lumpur Malaysia. The video now has over 20k views on TikTok and growing. The deal was an exchange of gear for content deliverables which included 1x video and an assisting story promotion.</CardContent>
+                    <CardContent className="max-h-24 overflow-y-scroll border-t-2 scrollbar-thin">My first ever brand deal with full control over the pitch, pre-production, shooting and editing. Using the TELESIN master grip and the help of a friend, I filmed this collaboration video in the center of Kuala Lumpur Malaysia. The video now has over 20k views on TikTok and growing. The deal was an exchange of gear for content deliverables which included 1x video and an assisting story promotion.</CardContent>
                 </Card>
             </motion.div>
             <motion.div
@@ -116,7 +116,7 @@ export default function Work(){
                         <CardTitle>TELESIN</CardTitle>
                         <CardDescription>fog machine collaboration</CardDescription>
                     </CardHeader>
-                    <CardContent>Another collaboration deal with TELESIN with the same control over the entire project. I pitched the video idea to them, independantly filmed and edited the whole shoot within my room, using the Fog machine itself to create that cinematic grain built into the footage.</CardContent>
+                    <CardContent className="max-h-24 overflow-y-scroll border-t-2 scrollbar-thin">Another collaboration deal with TELESIN with the same control over the entire project. I pitched the video idea to them, independantly filmed and edited the whole shoot within my room, using the Fog machine itself to create that cinematic grain built into the footage.</CardContent>
                 </Card>
             </motion.div>
             <motion.div
@@ -147,7 +147,7 @@ export default function Work(){
                         <CardTitle>SANDMARC</CardTitle>
                         <CardDescription>Hybrid mount collaboration</CardDescription>
                     </CardHeader>
-                    <CardContent>A SANDMARC collaboration featuring the hybrid mount seen on the thumbnail along with SANDMARCs Creator grip fit for iPhone cinematography. The collaboration deal also required 1x video covering the product along a story post deliverable, where I also had full control over the videos content and editing.</CardContent>
+                    <CardContent className="max-h-24 overflow-y-scroll border-t-2 scrollbar-thin">A SANDMARC collaboration featuring the hybrid mount seen on the thumbnail along with SANDMARCs Creator grip fit for iPhone cinematography. The collaboration deal also required 1x video covering the product along a story post deliverable, where I also had full control over the videos content and editing.</CardContent>
                 </Card>
             </motion.div>
         </div>
