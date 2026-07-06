@@ -142,7 +142,7 @@
   
   @media (min-width: 768px) {
     .carousel-wrapper {
-      height: 380px;
+      height: 340px;
       width: 600px;
     }
 
@@ -150,7 +150,7 @@
 
   @media (min-width: 1280px) {
     .carousel-wrapper {
-    height: 420px;
+    height: 380px;
     width: 600px;
   }
 

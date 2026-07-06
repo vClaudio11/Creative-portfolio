@@ -3,7 +3,16 @@
 export default function About() {
     
     return(
-        <div className="flex flex-col justify-center items-center h-[50vh] ">
+        <div className="relative flex flex-col justify-center items-center h-[50vh] ">
+            <div
+                className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+                style={{ 
+                    backgroundImage: "url('/photos/work/3.jpg')",
+                    filter: "blur(5px) brightness(0.6)",
+                    transform: "scale(1.05)"  // ← prevents blur edges showing white
+                }}
+            >
+            </div>
             <div className="px-8 md:px-16 lg:px-30">
                 <p className="text-center text-xl md:text-2xl lg:text-4xl font-semibold uppercase mb-2 lg:mb-4">About me</p>
                 <p className="text-center text-xs md:text-sm lg:text-[1.1rem]">Born in the Philippines, but raised in the Middle East (Qatar), I grew up in the same city for 17 years before coming back home to Philippines. Shortly after that I completed my foundation couse in Malaysia Kuala Lumpur where I first picked up a camera.</p>

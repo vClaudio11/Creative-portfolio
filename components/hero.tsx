@@ -123,12 +123,8 @@ export default function Hero() {
                 }}
             >
                 <div className="flex flex-col flex-1 justify-center items-center w-full h-screen">
-                    {/* <div className="absolute top-12">
-                        <p className="text-center text-7xl uppercase font-semibold">Independant</p>
-                        <p className="text-center text-7xl uppercase font-semibold">cinematographer</p>
-                    </div> */}
                     <div>
-                        <h1 className="text-center text-4xl md:text-6xl lg:text-6xl uppercase font-bold">Von Claudio</h1>
+                        <h1 className="text-center text-4xl md:text-5xl lg:text-5xl uppercase font-bold">Von Claudio</h1>
                         <p className='text-center text-[0.8rem] px-14 md:text-sm md:px-30 lg:text-[0.9rem] lg:px-60'>Based in the Philippines | Experienced in creative-directing, cinematic shooting & Davinci resolve editing </p>
                     </div>
                     <Field className="justify-center items-center px-8">   
@@ -159,7 +155,7 @@ export default function Hero() {
                                             <p className="text-center text-xs/snug md:text-xs/snug lg:text-sm/snug mb-1 uppercase">{video.header}</p>
                                             <video
                                                 ref={el => { videoRefs.current[index] = el}} 
-                                                className="max-w-none w-[250px] md:w-[360px] lg:w-[420px] rounded-md"
+                                                className="max-w-none w-[250px] md:w-[360px] lg:w-[400px] rounded-md"
                                                 src={video.video}
                                                 muted
                                                 loop
@@ -177,14 +173,14 @@ export default function Hero() {
                     {/* Render only on mobile screens */}
                     <Button 
                         onClick={handleLeft}
-                        className="sm:hidden absolute top-[50%] left-[12%] z-10 text-white scale-[2] -rotate-180" 
+                        className="sm:hidden absolute top-[52%] left-[12%] z-10 text-white scale-[2] -rotate-180" 
                         variant="link" 
                         size="icon-lg">
                         <CircleArrowRight />
                     </Button>
                     <Button
                         onClick={handleRight} 
-                        className="sm:hidden absolute top-[50%] right-[12%] z-10 text-white scale-[2]" 
+                        className="sm:hidden absolute top-[52%] right-[12%] z-10 text-white scale-[2]" 
                         variant="link" 
                         size="icon-lg">
                         <CircleArrowRight />

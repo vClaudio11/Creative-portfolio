@@ -81,7 +81,7 @@ export default function Work(){
     }
 
     return(
-        <div className="relative min-h-fit md:min-h-fit lg:min-h-fit">
+        <div id='myWork' className="relative min-h-fit md:min-h-fit lg:min-h-fit">
             <div
                 className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
                 style={{ 

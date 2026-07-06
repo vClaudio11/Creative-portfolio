@@ -20,8 +20,9 @@ export default function Gallery() {
     const yContainer = useTransform(smoothProgress, [0, 1], [40, -40])
     return(
         <motion.div 
+            id="gallery"
             ref={containerRef}
-            className="min-h-screen w-full p-4 md:p-8 lg:p-12"
+            className="min-h-fit w-full p-4 md:p-8 lg:p-12"
             style={{ transformOrigin: "center center", 
                     y: yContainer
             }}
