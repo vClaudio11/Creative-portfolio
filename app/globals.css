@@ -146,9 +146,21 @@
   }
   
   .carousel-video {
-    width: 240px;
+    width: 260px;
   }
   
+  @media (min-width: 768px) {
+    .carousel-wrapper {
+      height: 340px;
+      width: 600px;
+    }
+  
+    .carousel-video {
+      width: 340px;
+    }
+  
+  }
+
   @media (min-height: 800px) {
     .carousel-wrapper {
       height: 440px;
@@ -160,6 +172,7 @@
     }
 
 }
+
 
   @media (min-height: 900px) {
     .carousel-wrapper {

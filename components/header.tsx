@@ -25,14 +25,14 @@ export default function Header(){
                     opacity: hidden ? 0 : 1,
                 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="w-full px-4 pt-8 md:py-6 border-b-2 z-30 bg-accent h-14 md:h-12 lg:h-8"
+                className="w-full px-4 pt-8 md:py-6 xl:pb-8 border-b-2 z-30 bg-accent h-14 md:h-12 lg:h-8"
             >
                 <div className="max-w-4xl w-full mx-auto flex flex-row items-center justify-between">
                     <nav className="flex flex-row text-sm justify-evenly gap-2 w-full pointer-events-auto">
-                        <a href="#about" className="hover:underline">About me</a>
-                        <a href="#myWork" className="hover:underline">My work</a>
-                        <a href="#gallery" className="hover:underline">Gallery</a>
-                        <a href="#contacts" className="hover:underline">Contact me</a>
+                        <a href="#about" className="hover:underline xl:text-lg uppercase">About me</a>
+                        <a href="#myWork" className="hover:underline xl:text-lg uppercase">My work</a>
+                        <a href="#gallery" className="hover:underline xl:text-lg uppercase">Gallery</a>
+                        <a href="#contacts" className="hover:underline xl:text-lg uppercase">Contact me</a>
                     </nav>
                 </div>
             </motion.div>
