@@ -146,9 +146,6 @@
       width: 600px;
     }
 
-    .work-images {
-      border-radius: 8px;
-    }
 }
 
   @media (min-width: 1280px) {
@@ -156,5 +153,6 @@
     height: 420px;
     width: 600px;
   }
+
 }
 }
