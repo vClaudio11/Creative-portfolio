@@ -155,7 +155,7 @@ export default function Hero() {
                                             <p className="text-center text-xs/snug md:text-xs/snug lg:text-sm/snug mb-1 uppercase">{video.header}</p>
                                             <video
                                                 ref={el => { videoRefs.current[index] = el}} 
-                                                className="max-w-none w-[250px] md:w-[360px] lg:w-[400px] rounded-md"
+                                                className="max-w-none carousel-video rounded-md"
                                                 src={video.video}
                                                 muted
                                                 loop
@@ -173,14 +173,14 @@ export default function Hero() {
                     {/* Render only on mobile screens */}
                     <Button 
                         onClick={handleLeft}
-                        className="sm:hidden absolute top-[52%] left-[12%] z-10 text-white scale-[2] -rotate-180" 
+                        className="hero-button absolute top-[50%] left-[12%] z-10 text-white scale-[2] -rotate-180" 
                         variant="link" 
                         size="icon-lg">
                         <CircleArrowRight />
                     </Button>
                     <Button
                         onClick={handleRight} 
-                        className="sm:hidden absolute top-[52%] right-[12%] z-10 text-white scale-[2]" 
+                        className="hero-button absolute top-[50%] right-[12%] z-10 text-white scale-[2]" 
                         variant="link" 
                         size="icon-lg">
                         <CircleArrowRight />

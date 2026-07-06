@@ -134,25 +134,43 @@
 }
 
 @layer utilities {
+  @media (min-width: 394px) {
+    .hero-button {
+      display: none;
+    }
+  }
+
   .carousel-wrapper {
     height: 300px;
     width: 300px;
   }
-
   
-  @media (min-width: 768px) {
+  .carousel-video {
+    width: 240px;
+  }
+  
+  @media (min-height: 800px) {
     .carousel-wrapper {
-      height: 340px;
+      height: 440px;
       width: 600px;
+    }
+
+    .carousel-video {
+      width: 440px;
     }
 
 }
 
-  @media (min-width: 1280px) {
+  @media (min-height: 900px) {
     .carousel-wrapper {
-    height: 380px;
+    height: 540px;
     width: 600px;
   }
+
+  .carousel-video {
+      width: 540px;
+  }
+
 
 }
 }

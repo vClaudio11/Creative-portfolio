@@ -1,6 +1,8 @@
 'use client'
 import { motion, useScroll, useMotionValueEvent } from "motion/react"
 import { useState } from "react"
+import { DropdownMenu, DropdownMenuTrigger } from "./ui/dropdown-menu"
+import { Button } from "./ui/button"
 
 export default function Header(){
     const [hidden, setHidden] = useState(false)
@@ -30,7 +32,7 @@ export default function Header(){
                         <a href="#about" className="hover:underline">About me</a>
                         <a href="#myWork" className="hover:underline">My work</a>
                         <a href="#gallery" className="hover:underline">Gallery</a>
-                        <a href="#contacts" className="hover:underline">Contacts</a>
+                        <a href="#contacts" className="hover:underline">Contact me</a>
                     </nav>
                 </div>
             </motion.div>
