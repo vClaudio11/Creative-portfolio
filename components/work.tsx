@@ -231,7 +231,7 @@ export default function Work(){
                         )}
                     </div>
                     {/* lg viewports only */}
-                    <div className="hidden md:hidden lg:flex lg:flex-row lg:gap-4">
+                    <div className="hidden md:hidden lg:flex lg:flex-row lg:justify-center lg:gap-4 lg:max-w-[1600px]">
                         <motion.div
                             custom={direction} 
                             variants={slideVariant}
@@ -244,7 +244,7 @@ export default function Work(){
                             className="flex flex-row justify-center gap-4 md:w-full mt-4"
                         >   
                         <div ref={cardRef}>
-                            <Card className="mx-auto w-[280px] md:w-[420px] lg:w-[320px] max-w-sm pt-0">
+                            <Card className="mx-auto w-[280px] md:w-[420px] lg:w-full lg:h-full max-w-sm pt-0">
                                 <div className="inset-0 z-30 aspect-video">
                                     <Image 
                                         width={600}
@@ -276,7 +276,7 @@ export default function Work(){
                                 opacity: { duration: 0.6, ease: 'easeOut'}
                             }}
                         >
-                            <Card className="mx-auto w-[280px] md:w-[420px] lg:w-[320px] max-w-sm pt-0">
+                            <Card className="mx-auto w-[280px] md:w-[420px] lg:w-full lg:h-full max-w-sm pt-0">
                                 <div className="inset-0 z-30 aspect-video">
                                     <Image 
                                         width={600}
@@ -307,7 +307,7 @@ export default function Work(){
                             }}
                             className="flex flex-row justify-center gap-4 md:w-full mt-4"
                         >    
-                            <Card className="mx-auto w-[280px] md:w-[420px] lg:w-[320px] max-w-sm pt-0">
+                            <Card className="mx-auto w-[280px] md:w-[420px] lg:w-full lg:h-full max-w-sm pt-0">
                                 <div className="inset-0 z-30 aspect-video">
                                     <Image 
                                         width={600}
