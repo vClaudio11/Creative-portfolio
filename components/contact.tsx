@@ -22,11 +22,11 @@ export default function Contact() {
 
     const yContainer = useTransform(smoothProgress, [0, 1], [20, -20])
     return(
-        <div id="contacts" className="h-dvh relative flex flex-col justify-center items-center py-12 px-8">
+        <div id="contacts" className="h-fit relative flex flex-col justify-center items-center py-12 px-8">
             <div
                 className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
                 style={{ 
-                    backgroundImage: "url('/photos/work/1.jpg')",
+                    backgroundImage: "url('/photos/gallery/5.jpg')",
                     filter: "blur(5px) brightness(0.6)",
                     transform: "scale(1.05)"  // ← prevents blur edges showing white
                 }}
@@ -42,9 +42,18 @@ export default function Contact() {
                 whileInView={{ scale: 1, opacity: 1, filter: "brightness(1)" }}
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
+                className="lg:flex lg:flex-row lg:gap-8"
             >    
-                <Card className="w-full pt-0">
-                    <div className="inset-0 z-30 aspect-video">
+                {/* only show image for lg breakpoints */}
+                <Image 
+                    width={1200}
+                    height={675}
+                    src='/photos/contact-bg.jpg' 
+                    alt="Brand work thumbnail"
+                    className="contact-image relative z-20 aspect-video w-full object-cover rounded-xl"
+                />
+                <Card className="w-full pt-0 lg:flex lg:flex-col lg:justify-center lg:items-center">
+                    <div className="xl:hidden inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
                             height={338}
@@ -53,12 +62,12 @@ export default function Contact() {
                             className="relative z-20 aspect-video w-full object-cover"
                         />
                     </div>
-                    <CardHeader>
-                        <CardTitle className="text-center text-lg">Let&apos;s work</CardTitle>
+                    <CardHeader className="w-full">
+                        <CardTitle className="text-center text-lg lg:text-2xl">Let&apos;s work</CardTitle>
                     </CardHeader>
-                    <CardContent className="flex flex-col justify-center items-center">
+                    <CardContent className="flex flex-col justify-center items-center lg:text-lg">
                         My socials:
-                        <CardDescription className="mt-2">vonclaudio.college@gmail.com</CardDescription>
+                        <CardDescription className="mt-2 lg:text-sm">vonclaudio.college@gmail.com</CardDescription>
                         <div className="flex flex-row justify-center items-center w-full">
                             <a href="https://www.tiktok.com/@vonclaudio1" target="_blank" rel="noopener noreferrer"> 
                                 <Image 

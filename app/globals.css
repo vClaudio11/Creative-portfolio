@@ -148,6 +148,10 @@
   .carousel-video {
     width: 260px;
   }
+
+  .contact-image {
+    display: none;
+  }
   
   @media (min-width: 768px) {
     .carousel-wrapper {
@@ -159,6 +163,12 @@
       width: 340px;
     }
   
+  }
+
+  @media (min-width: 1280px) {
+    .contact-image {
+      display: flex;
+    }
   }
 
   @media (min-height: 800px) {
