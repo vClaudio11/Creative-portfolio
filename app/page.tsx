@@ -16,7 +16,7 @@ export default function Home() {
       <Work />
       <Gallery />
       {/* <About /> */}
-      {/* <Contact /> */}
+      <Contact />
     </div>
   )
 }

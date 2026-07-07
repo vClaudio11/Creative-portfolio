@@ -115,7 +115,7 @@ export default function Hero() {
     }
     
     return(
-        <div className="relative h-screen flex flex-col">
+        <div className="relative h-screen flex flex-col hero-wrapper">
             <motion.div
                 ref={heroRef}
                 style={{
@@ -142,7 +142,7 @@ export default function Hero() {
                                     <div 
                                         key={index}
                                         style={{
-                                            transform: `translate(-50%, -50%) translateX(${Math.abs(distance) === 2 ? 0 : distance * 150}px) scale(${Math.abs(distance) === 0 ? 1.3 : 1 - (Math.abs(distance) / videoArray.length) + 0.15})`,
+                                            transform: `translate(-50%, -50%) translateX(${Math.abs(distance) === 2 ? 0 : distance * 160}px) scale(${Math.abs(distance) === 0 ? 1.3 : 1 - (Math.abs(distance) / videoArray.length) + 0.15})`,
                                             opacity: `${Math.abs(distance) === 0 ? 1 : 1 - (Math.abs(distance) * 0.4)}`,
                                             zIndex: 10 - Math.abs(distance),
                                             transition: 'all 0.6s ease-in-out',

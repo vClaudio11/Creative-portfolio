@@ -1,8 +1,7 @@
 'use client'
 import { motion, useScroll, useMotionValueEvent } from "motion/react"
 import { useState } from "react"
-import { DropdownMenu, DropdownMenuTrigger } from "./ui/dropdown-menu"
-import { Button } from "./ui/button"
+import Link from "next/link"
 
 export default function Header(){
     const [hidden, setHidden] = useState(false)
@@ -30,9 +29,9 @@ export default function Header(){
                 <div className="max-w-4xl w-full mx-auto flex flex-row items-center justify-between">
                     <nav className="flex flex-row text-sm justify-evenly gap-2 w-full pointer-events-auto">
                         <a href="#about" className="hover:underline xl:text-lg uppercase">About me</a>
-                        <a href="#myWork" className="hover:underline xl:text-lg uppercase">My work</a>
-                        <a href="#gallery" className="hover:underline xl:text-lg uppercase">Gallery</a>
-                        <a href="#contacts" className="hover:underline xl:text-lg uppercase">Contact me</a>
+                        <Link href="#myWork" className="hover:underline xl:text-lg uppercase">My work</Link>
+                        <Link href="#gallery" className="hover:underline xl:text-lg uppercase">Gallery</Link>
+                        <Link href="#contacts" className="hover:underline xl:text-lg uppercase">Contact me</Link>
                     </nav>
                 </div>
             </motion.div>

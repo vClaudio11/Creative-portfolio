@@ -176,12 +176,12 @@
 
   @media (min-height: 900px) {
     .carousel-wrapper {
-    height: 540px;
+    height: 600px;
     width: 600px;
   }
 
   .carousel-video {
-      width: 540px;
+      width: 640px;
   }
 
 
