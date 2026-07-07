@@ -194,6 +194,17 @@
       width: 640px;
   }
 
+  .about-header {
+    font-size: x-large;
+  }
+
+  .about-content {
+    font-size: large;
+  }
+
+  .about-button {
+    font-size: large;
+  }
 
 }
 }

@@ -31,16 +31,16 @@ export default function Header(){
                     <nav className="flex flex-row text-sm justify-evenly gap-2 w-full pointer-events-auto">
                         <AlertDialog>
                             <AlertDialogTrigger>
-                                <p className="hover:underline xl:text-lg uppercase">About me</p>
+                                <p className="hover:underline uppercase xl:text-lg">About me</p>
                             </AlertDialogTrigger>
                             <AlertDialogContent>
-                                <AlertDialogHeader className="text-lg xl:text-2xl">About me</AlertDialogHeader>
+                                <AlertDialogHeader className="text-lg about-header">About me</AlertDialogHeader>
                                 <AlertDialogDescription>
-                                    <span className="block text-left w-full mb-3 xl:text-lg">Born in the Philippines, but grew up and raised in the middle east. I spent 16 years of my life in Qatar studying in a small city called Mesaieed before moving back to the Philippines temporarily. I finished my Foundation In Engineering course in Kuala Lumpur Malaysia, before coming back once more to the Philippines. Currently I am set to enroll in Auckland, New Zealand for my Electronics Engineering degree this July</span>
-                                    <span className="block xl:text-lg">I started filming my life and all sorts of content since January 2025 during my stay in Malaysia. Now, with nearly 8,000+ followers across my social media accounts and 3 international brand collaborations, I continue to pursue cinematic videography whilst also currating my life.</span>
+                                    <span className="block text-left w-full mb-3 about-content">Born in the Philippines, but grew up and was raised in the middle east. I spent 16 years of my life in Qatar studying in a small city called Mesaieed before moving back to the Philippines temporarily. I finished my Foundation In Engineering course in Kuala Lumpur Malaysia, before coming back once more to the Philippines. Currently I am set to enroll in Auckland, New Zealand for my Electronics Engineering degree this July</span>
+                                    <span className="block about-content">I started filming my life and all sorts of content since January 2025 during my stay in Malaysia. Now, with nearly 8,000+ followers across my social media accounts and 3 international brand collaborations, I continue to pursue cinematic videography whilst also currating my life.</span>
                                 </AlertDialogDescription>
                                 <AlertDialogFooter>
-                                    <AlertDialogCancel className='xl:text-lg'>Got it!</AlertDialogCancel>
+                                    <AlertDialogCancel className='about-button'>Got it!</AlertDialogCancel>
                                 </AlertDialogFooter>
                             </AlertDialogContent>
                         </AlertDialog>
