@@ -262,7 +262,7 @@ export default function Work(){
                                     <CardTitle>TELESIN</CardTitle>
                                     <CardDescription>Master grip collaboration</CardDescription>
                                 </CardHeader>
-                                <CardContent className="text-sm max-h-48 overflow-y-scroll scrollbar-thin md:max-h-60 md:text-sm md:scrollbar-none md:border-none lg:text-lg lg:max-h-90">My first ever brand deal with full control over the pitch, pre-production, shooting and editing. Using the TELESIN master grip and the help of a friend, I filmed this collaboration video in the center of Kuala Lumpur Malaysia. The video now has over 20k views on TikTok and growing. The deal was an exchange of gear for content deliverables which included 1x video and an assisting story promotion.</CardContent>
+                                <CardContent className="text-sm max-h-48 overflow-y-scroll scrollbar-thin md:max-h-60 md:text-sm md:scrollbar-none md:border-none lg:text-base lg:max-h-90">My first ever brand deal with full control over the pitch, pre-production, shooting and editing. Using the TELESIN master grip and the help of a friend, I filmed this collaboration video in the center of Kuala Lumpur Malaysia. The video now has over 20k views on TikTok and growing. The deal was an exchange of gear for content deliverables which included 1x video and an assisting story promotion.</CardContent>
                             </Card>
                         </div>
                         </motion.div>
@@ -294,7 +294,7 @@ export default function Work(){
                                     <CardTitle>TELESIN</CardTitle>
                                     <CardDescription>Fog machine collaboration</CardDescription>
                                 </CardHeader>
-                                <CardContent className="text-sm max-h-48 overflow-y-scroll scrollbar-thin md:max-h-60 md:text-sm md:scrollbar-none md:border-none lg:text-lg lg:max-h-90">Another collaboration deal with TELESIN with the same control over the entire project. I pitched the video idea to them, independantly filmed and edited the whole shoot within my room, using the Fog machine itself to create that cinematic grain built into the footage. The collaboration deal was the fog machine in exchange for 1x video deliverable within a month of receiving the product.</CardContent>
+                                <CardContent className="text-sm max-h-48 overflow-y-scroll scrollbar-thin md:max-h-60 md:text-sm md:scrollbar-none md:border-none lg:text-base lg:max-h-80">Another collaboration deal with TELESIN with the same control over the entire project. I pitched the video idea to them, independantly filmed and edited the whole shoot within my room, using the Fog machine itself to create that cinematic grain built into the footage. The collaboration deal was the fog machine in exchange for 1x video deliverable within a month of receiving the product.</CardContent>
                             </Card>
                         </motion.div>
                         <motion.div
@@ -325,7 +325,7 @@ export default function Work(){
                                     <CardTitle>SANDMARC</CardTitle>
                                     <CardDescription>Hybrid mount collaboration</CardDescription>
                                 </CardHeader>
-                                <CardContent className="text-sm max-h-48 overflow-y-scroll scrollbar-thin md:max-h-60 md:text-sm md:scrollbar-none md:border-none lg:text-lg lg:max-h-90">A SANDMARC collaboration featuring the hybrid mount seen on the thumbnail along with SANDMARCs Creator grip fit for iPhone cinematography. The company reached out to me and asked for a collaboration. The collaboration deal also required 1x video covering the product along a story post deliverable, where I also had full control over the videos content and editing.</CardContent>
+                                <CardContent className="text-sm max-h-48 overflow-y-scroll scrollbar-thin md:max-h-60 md:text-sm md:scrollbar-none md:border-none lg:text-base lg:max-h-90">A SANDMARC collaboration featuring the hybrid mount seen on the thumbnail along with SANDMARCs Creator grip fit for iPhone cinematography. The company reached out to me and asked for a collaboration. The collaboration deal also required 1x video covering the product along a story post deliverable, where I also had full control over the videos content and editing.</CardContent>
                             </Card>
                         </motion.div>
                     </div>

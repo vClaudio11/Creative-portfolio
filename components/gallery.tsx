@@ -53,21 +53,18 @@ export default function Gallery() {
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/2new.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/3.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/4.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
@@ -80,21 +77,18 @@ export default function Gallery() {
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/7.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/8.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/9.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
@@ -107,21 +101,18 @@ export default function Gallery() {
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/11.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/12.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/5.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
@@ -134,21 +125,32 @@ export default function Gallery() {
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/14.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/15.jpg'
-                    className=""
                 />
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
                     src='/photos/gallery/16.jpg'
-                    className=""
+                />
+                <Image 
+                    width={600}
+                    height={338}
+                    alt="finger pointing at map"
+                    src='/photos/gallery/17.jpg'
+                    className="gallery-image"
+                />
+                <Image 
+                    width={600}
+                    height={338}
+                    alt="finger pointing at map"
+                    src='/photos/gallery/18.jpg'
+                    className="gallery-image"
                 />
             </div>
             </motion.div>

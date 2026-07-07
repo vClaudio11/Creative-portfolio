@@ -115,7 +115,7 @@ export default function Hero() {
     }
     
     return(
-        <div id='hero' className="relative h-screen flex flex-col hero-wrapper">
+        <div id='hero' className="relative h-screen flex flex-col hero-wrapper mt-8">
             <motion.div
                 ref={heroRef}
                 style={{
