@@ -193,17 +193,10 @@ export default function Hero() {
                                 <HoverCardTrigger delay={10} closeDelay={100}>
                                     <Button variant='link' className="text-center -mt-2">TELESIN</Button>
                                 </HoverCardTrigger>
-                                <HoverCardContent side="left">
-                                    <span>
-                                        <img 
-                                            className='lg:w-full'
-                                            src='/photos/telesin-logo.jpeg'
-                                            alt='telesin logo'
-                                        />
-                                    </span>
+                                <HoverCardContent side="bottom">
                                     <p className="font-semibold">Collaboration with deliverables</p>
-                                    <p>Full-control over planning, pre-production, shooting and editing with deliverables</p>
-                                    <p className="mt-1 text-xs text-muted-foreground">Completed September 2025 & March 2026</p>
+                                    <p>Full-control over planning, pre-production, shooting and editing with deliverables. Completed in Kuala Lumpur, Malaysia and the Philippines.</p>
+                                    <p className="mt-1 text-xs text-muted-foreground">Completed September 2025, March 2026</p>
                                 </HoverCardContent>
                             </HoverCard>
                             <HoverCard>
@@ -212,7 +205,7 @@ export default function Hero() {
                                 </HoverCardTrigger>
                                 <HoverCardContent side="bottom">
                                     <p className="font-semibold">Collaboration with deliverables</p>
-                                    <p>Full-control over planning, pre-production, shooting and editing with deliverables</p>
+                                    <p>Full-control over planning, pre-production, shooting and editing with deliverables. Completed in the Philippines.</p>
                                     <p className="mt-1 text-xs text-muted-foreground">Completed October 2025</p>
                                 </HoverCardContent>
                             </HoverCard>

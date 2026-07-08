@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
-import { motion, useScroll, useSpring, useTransform } from "framer-motion"
+import { motion, useScroll, useSpring, useTransform } from "motion/react"
 import { useRef } from "react"
 
 export default function Contact() {
@@ -50,9 +50,9 @@ export default function Contact() {
                     height={675}
                     src='/photos/contact-bg.jpg' 
                     alt="Brand work thumbnail"
-                    className="contact-image relative z-20 aspect-video w-full object-cover rounded-xl"
+                    className="contact-image lg:w-4/5 relative z-20 aspect-video w-full object-cover rounded-xl"
                 />
-                <Card className="w-full pt-0 lg:flex lg:flex-col lg:justify-center lg:items-center">
+                <Card className="w-full pt-0 lg:flex lg:flex-col lg:justify-center lg:items-center lg:w-1/5">
                     <div className="xl:hidden inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
