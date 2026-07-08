@@ -156,6 +156,10 @@
   .gallery-image {
     display: none;
   }
+
+  .work-extra {
+    display: none;
+  }
   
   @media (min-width: 768px) {
     .carousel-wrapper {
@@ -212,6 +216,12 @@
 
   .about-button {
     font-size: large;
+  }
+
+  @media (min-width: 1536px) {
+    .work-extra {
+      display: flex;
+    }
   }
 
 }

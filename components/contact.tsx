@@ -42,7 +42,7 @@ export default function Contact() {
                 whileInView={{ scale: 1, opacity: 1, filter: "brightness(1)" }}
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="lg:flex lg:flex-row lg:gap-8 xl:px-4"
+                className="lg:flex lg:flex-row lg:gap-8 xl:mx-auto"
             >    
                 {/* only show image for lg breakpoints */}
                 <Image 

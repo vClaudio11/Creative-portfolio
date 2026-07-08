@@ -22,7 +22,7 @@ export default function Gallery() {
         <motion.div 
             id="gallery"
             ref={containerRef}
-            className="min-h-fit w-full p-4 md:p-8 lg:p-12"
+            className="min-h-fit w-full p-4 md:p-8 lg:px-12"
             style={{ transformOrigin: "center center", 
                     y: yContainer
             }}

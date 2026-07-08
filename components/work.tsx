@@ -6,7 +6,7 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 import  { motion, useScroll, useSpring, useTransform } from 'motion/react'
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./ui/button"
-import { CircleArrowRight } from "lucide-react"
+import { CircleArrowRight, MoveRight, MoveLeft } from "lucide-react"
 
 const slideVariant = {
     initial: (direction: directionType) => ({
@@ -232,7 +232,11 @@ export default function Work(){
                     </div>
 
                     {/* lg viewports only */}
-                    <div className="hidden md:hidden lg:flex lg:flex-row lg:justify-center lg:gap-8 xl:gap-10 lg:max-w-[1600px]">
+                    <div className="hidden md:hidden lg:flex lg:flex-row lg:justify-center lg:gap-8 xl:gap-10 lg:max-w-[1600px] 2xl:w-full 2xl:justify-between 2xl:gap-6">
+                        <div className="work-extra flex-row justify-center items-center cursor-default">
+                            <MoveLeft className="text-white"/>
+                            <p className="z-40 text-white text-center text-sm/3">More content in production</p>
+                        </div>
                         <motion.div
                             custom={direction} 
                             variants={slideVariant}
@@ -327,7 +331,13 @@ export default function Work(){
                                 </CardHeader>
                                 <CardContent className="text-sm max-h-48 overflow-y-scroll scrollbar-thin md:max-h-60 md:text-sm md:scrollbar-none md:border-none lg:text-base lg:max-h-90">A SANDMARC collaboration featuring the hybrid mount seen on the thumbnail along with SANDMARCs Creator grip fit for iPhone cinematography. The company reached out to me and asked for a collaboration. The collaboration deal also required 1x video covering the product along a story post deliverable, where I also had full control over the videos content and editing.</CardContent>
                             </Card>
+                            
+                        {/* 2xl / 1536px+ monitors and upwards */}
                         </motion.div>
+                        <div className="work-extra flex-row justify-center items-center cursor-default">
+                            <p className="z-40 text-white text-center text-sm/3">More content in production</p>
+                            <MoveRight className="text-white"/>
+                        </div>
                     </div>
                 </div>
             </motion.div>
