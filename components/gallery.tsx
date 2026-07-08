@@ -33,15 +33,6 @@ export default function Gallery() {
         >
             <p className="text-center text-4xl mb-2 md:mb-4 uppercase font-bold">shot gallery</p>
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12">
-                <motion.div
-                    initial='initial'
-                    animate={{ opacity: 1, x:0 }}
-                    transition={{ 
-                        x: {type: 'spring', stiffness: 300, damping: 40},
-                        opacity: { duration: 0.6, ease: 'easeOut'}
-                    }}
-                >
-                </motion.div>
                 <Image 
                     width={600}
                     height={338}

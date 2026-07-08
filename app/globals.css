@@ -131,7 +131,7 @@
   html {
     @apply font-sans;
   }
-  
+
   html, body {
     overflow-x: hidden;
 }
@@ -177,12 +177,14 @@
   
   }
 
-  @media (min-width: 1280px) {
-    .contact-image {
+  @media (min-width: 1080px) {
+    .gallery-image {
       display: flex;
     }
+  }
 
-    .gallery-image {
+  @media (min-width: 1280px) {
+    .contact-image {
       display: flex;
     }
   }
