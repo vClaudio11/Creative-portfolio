@@ -41,114 +41,114 @@ export default function Gallery() {
                         opacity: { duration: 0.6, ease: 'easeOut'}
                     }}
                 >
-                    <Image 
-                        width={600}
-                        height={338}
-                        alt="finger pointing at map"
-                        src='/photos/gallery/1.jpg'
-                    />
                 </motion.div>
                 <Image 
                     width={600}
                     height={338}
                     alt="finger pointing at map"
+                    src='/photos/gallery/1.jpg'
+                />
+                <Image 
+                    width={600}
+                    height={338}
+                    alt="reading book"
                     src='/photos/gallery/2new.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="running down"
                     src='/photos/gallery/3.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="reading in front of sun rays"
                     src='/photos/gallery/4.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="walking down street"
                     src='/photos/gallery/6.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="image of behind someone walking"
                     src='/photos/gallery/7.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="looking out from the roof"
                     src='/photos/gallery/8.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="inside a red bag"
                     src='/photos/gallery/9.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="walking across the shore"
                     src='/photos/gallery/10.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="pinning photo to board"
                     src='/photos/gallery/11.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="standing in the middle of a street"
                     src='/photos/gallery/12.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="image of a busy street"
                     src='/photos/gallery/5.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="walking down a street"
                     src='/photos/gallery/13.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="behind an iPhone"
                     src='/photos/gallery/14.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="walking with a phone in hand"
                     src='/photos/gallery/15.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="opening a backpack"
                     src='/photos/gallery/16.jpg'
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="writing in a book"
                     src='/photos/gallery/17.jpg'
                     className="gallery-image"
                 />
                 <Image 
                     width={600}
                     height={338}
-                    alt="finger pointing at map"
+                    alt="silhouette behind sunsrise"
                     src='/photos/gallery/18.jpg'
                     className="gallery-image"
                 />
