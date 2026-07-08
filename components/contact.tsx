@@ -42,7 +42,7 @@ export default function Contact() {
                 whileInView={{ scale: 1, opacity: 1, filter: "brightness(1)" }}
                 viewport={{ amount: "some", once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="lg:flex lg:flex-row lg:gap-8"
+                className="lg:flex lg:flex-row lg:gap-8 xl:px-4"
             >    
                 {/* only show image for lg breakpoints */}
                 <Image 
@@ -50,9 +50,9 @@ export default function Contact() {
                     height={675}
                     src='/photos/contact-bg.jpg' 
                     alt="Brand work thumbnail"
-                    className="contact-image lg:w-4/5 relative z-20 aspect-video w-full object-cover rounded-xl"
+                    className="contact-image xl:w-3/4 relative z-20 aspect-video w-full object-cover rounded-xl"
                 />
-                <Card className="w-full pt-0 lg:flex lg:flex-col lg:justify-center lg:items-center lg:w-1/5">
+                <Card className="w-full pt-0 lg:flex lg:flex-col lg:justify-center lg:items-center xl:w-1/4">
                     <div className="xl:hidden inset-0 z-30 aspect-video">
                         <Image 
                             width={600}
